@@ -10,7 +10,6 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
 const form=document.querySelector('#projectForm');
 form?.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(form);const subject=encodeURIComponent(`Website inquiry from ${data.get('name')||'a prospective client'}`);const body=encodeURIComponent(`Name: ${data.get('name')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')}\nLocation: ${data.get('location')}\nProject: ${data.get('project')}\nBudget: ${data.get('budget')}\nTimeline: ${data.get('timeline')}\n\nMessage:\n${data.get('message')}`);window.location.href=`mailto:pointeconstructioninc@gmail.com?subject=${subject}&body=${body}`;});
-
 const portfolio=document.querySelector('[data-portfolio]');
 const portfolioSource=typeof portfolioData!=='undefined'?portfolioData:null;
 
@@ -61,3 +60,4 @@ if(gallery&&galleryData){
   lightbox.addEventListener('click',event=>{if(event.target===lightbox)closeLightbox();});
   document.addEventListener('keydown',event=>{if(lightbox.hidden)return;if(event.key==='Escape')closeLightbox();if(event.key==='ArrowLeft')move(-1);if(event.key==='ArrowRight')move(1);if(event.key==='Tab'){const controls=[closeButton,lightbox.querySelector('.lightbox-prev'),lightbox.querySelector('.lightbox-next')];const position=controls.indexOf(document.activeElement);if(event.shiftKey&&position===0){event.preventDefault();controls.at(-1).focus();}else if(!event.shiftKey&&position===controls.length-1){event.preventDefault();controls[0].focus();}}});
 }
+
