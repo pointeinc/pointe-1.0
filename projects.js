@@ -56,13 +56,21 @@ const portfolioData = {
     }
   ],
   galleries: {
+    // Corning stills: { src, alt, caption?, stage?, layout? }.
+    // Corning videos: { src, type?, poster?, caption? }. Use optimized local web assets only.
     corning: {
       type: 'project',
       title: 'Corning Project',
       eyebrow: 'Featured Home',
-      status: 'Project details and verified photography coming soon.',
-      placeholderCount: 6,
-      images: []
+      location: 'Corning, New York',
+      projectType: 'Major residential transformation / whole-home renovation',
+      introduction: 'The Corning Project is a major residential transformation in Corning, New York. The work is presented as a progression from the original home through construction and into the finished spaces, with an emphasis on the decisions and craftsmanship that bring a whole home together.',
+      hero: null,
+      before: [],
+      during: [],
+      finished: [],
+      details: [],
+      videos: []
     },
     greenhurst: {
       type: 'project',
@@ -73,36 +81,37 @@ const portfolioData = {
       images: []
     },
     renovations: {
-      type: 'category',
-      title: 'Renovations & Additions',
-      eyebrow: 'Project Collection',
-      status: 'A gallery for verified photography from multiple renovation and addition projects.',
-      placeholderCount: 6,
-      images: []
+      type: 'category', title: 'Renovations & Additions', eyebrow: 'Project Collection', href: 'renovations-additions.html',
+      status: 'Individual renovation and addition projects, documented from the original space through completion.',
+      projects: [
+        { slug: 'kitchen-renovation-01', title: 'Kitchen Renovation 01', cover: null, images: [] },
+        { slug: 'addition-01', title: 'Addition 01', cover: null, images: [] }
+      ]
     },
     exteriors: {
-      type: 'category',
-      title: 'Exterior Craftsmanship',
-      eyebrow: 'Project Collection',
-      status: 'A gallery for verified photography from multiple exterior projects.',
-      placeholderCount: 6,
-      images: []
+      type: 'category', title: 'Exterior Craftsmanship', eyebrow: 'Project Collection', href: 'exterior-craftsmanship.html',
+      status: 'Individual exterior projects with the finished result and the work behind it.',
+      projects: [
+        { slug: 'siding-project-01', title: 'Siding Project 01', cover: null, images: [] },
+        { slug: 'deck-project-01', title: 'Deck Project 01', cover: null, images: [] },
+        { slug: 'exterior-renovation-01', title: 'Exterior Renovation 01', cover: null, images: [] }
+      ]
     },
     sitework: {
-      type: 'category',
-      title: 'Sitework & Excavation',
-      eyebrow: 'Project Collection',
-      status: 'A gallery for verified photography from residential sitework and excavation projects.',
-      placeholderCount: 6,
-      images: []
+      type: 'category', title: 'Sitework & Excavation', eyebrow: 'Project Collection', href: 'sitework-excavation.html',
+      status: 'Individual residential sitework and excavation projects presented in clear project sequences.',
+      projects: [
+        { slug: 'excavation-project-01', title: 'Excavation Project 01', cover: null, images: [] },
+        { slug: 'site-preparation-01', title: 'Site Preparation 01', cover: null, images: [] }
+      ]
     },
     mechanical: {
-      type: 'category',
-      title: 'Mechanical Systems',
-      eyebrow: 'Supporting Expertise',
-      status: 'A gallery for verified photography from multiple residential mechanical installations.',
-      placeholderCount: 6,
-      images: []
+      type: 'category', title: 'Mechanical Systems', eyebrow: 'Supporting Expertise', href: 'mechanical-systems.html',
+      status: 'Individual residential mechanical installations, organized project by project.',
+      projects: [
+        { slug: 'hvac-project-01', title: 'HVAC Project 01', cover: null, images: [] },
+        { slug: 'heat-pump-project-01', title: 'Heat Pump Project 01', cover: null, images: [] }
+      ]
     }
   }
 };
