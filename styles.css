@@ -61,7 +61,7 @@ button,input,textarea,select{font:inherit}
 .split{display:grid;grid-template-columns:1.05fr 1fr;min-height:650px}
 .split-copy{padding:110px max(40px,calc((100vw - var(--max))/2));padding-right:7vw;display:flex;flex-direction:column;justify-content:center;background:var(--cream)}
 .split-copy .section-title{max-width:590px}
-.split-image{min-height:520px;background:url('assets/IMG_5377.jpeg') center/cover no-repeat}
+.split-image{min-height:520px;background:url('assets/greenhurst-entrance.webp') 50% 48%/cover no-repeat}
 .split-copy .lead{margin:30px 0}
 .text-link{display:inline-flex;align-items:center;gap:18px;color:var(--gold-dark);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 .text-link span{transition:.25s}
@@ -72,8 +72,9 @@ button,input,textarea,select{font:inherit}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{position:relative;min-height:470px;overflow:hidden;background:#222;color:#fff}
 .card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.7s}
-.card-image-renovations{object-position:48% 46%}
-.card-image-full-service{object-position:50% 47%}
+.card-image-custom-homes{object-position:40% 55%}
+.card-image-renovations{object-position:50% 48%}
+.card-image-full-service{object-position:50% 70%}
 .card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.02) 70%)}
 .card-content{position:absolute;z-index:2;left:28px;right:28px;bottom:25px}
 .card h3{margin:0 0 8px;font:600 2.2rem/1 var(--serif)}
@@ -95,24 +96,42 @@ button,input,textarea,select{font:inherit}
 .details-copy .lead{color:rgba(255,255,255,.66)}
 .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .detail-grid img{height:390px;width:100%;object-fit:cover}
-.detail-image-stairs{object-position:72% 58%}
-.detail-image-fireplace{object-position:53% 52%}
-.detail-image-exterior{object-position:50% 62%}
+.detail-image-stairs{object-position:50% 58%}
+.detail-image-bath{object-position:55% 50%}
+.detail-image-fireplace{object-fit:contain;object-position:50% 50%}
 
 .cta{position:relative;min-height:450px;display:flex;align-items:center;background:url('assets/cta.jpg') center/cover no-repeat;color:#fff}
 .cta:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.78),rgba(10,10,9,.15))}
 .cta-content{position:relative;z-index:1}
 .cta h2{max-width:760px;margin:0 0 30px;font:600 clamp(3rem,6vw,5.8rem)/.92 var(--serif);letter-spacing:-.04em}
 
+.site-closing-image{min-height:450px;background-position:center;background-size:cover;background-repeat:no-repeat}
+.homepage-closing-image{background-image:url('assets/greenhurst-entrance-2.webp');background-position:50% 44%}
+.default-closing-image{background-image:url('assets/cta.jpg')}
+.site-closing-message{padding:82px 0;text-align:center;background:var(--cream)}
+.site-closing-message>div{max-width:860px}
+.site-closing-message h2{margin:0;font:600 clamp(2.8rem,5vw,4.8rem)/.96 var(--serif);letter-spacing:-.035em}
+.site-closing-message p{max-width:680px;margin:24px auto 30px;color:var(--muted);font-size:1.05rem}
+
 .page-hero{padding:220px 0 100px;background:var(--charcoal);color:white}
 .page-hero h1{margin:0;font:600 clamp(4rem,8vw,7rem)/.86 var(--serif)}
 .page-hero p{max-width:650px;color:rgba(255,255,255,.7);font-size:1.08rem}
+.process-page-hero h1{max-width:930px;line-height:.9}
+.process-page-hero .eyebrow{color:var(--gold)}
+.process-page-hero .hero-copy{max-width:620px;margin:30px 0 0;color:rgba(255,255,255,.74);line-height:1.75}
 .content-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
 .quote{font:600 clamp(2.2rem,4vw,4rem)/1.05 var(--serif);margin:0}
 .standards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .standard{padding:30px;border-top:1px solid var(--line);background:#fff}
 .standard h3{font:600 1.7rem var(--serif);margin:0 0 8px}
 .standard p{margin:0;color:var(--muted)}
+.process-expectations{padding:90px 0}
+.process-expectations .section-title{margin-bottom:38px}
+.expectations-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+.expectations-grid article{padding-top:24px;border-top:1px solid var(--line)}
+.expectations-grid h3{margin:0 0 12px;font:600 1.75rem/1.05 var(--serif)}
+.expectations-grid p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.7}
+.expectations-closing{max-width:760px;margin:38px 0 0;color:#4f514c;font-size:1.04rem;line-height:1.7}
 
 .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
 .contact-card{background:var(--paper);padding:38px}
@@ -131,6 +150,10 @@ button,input,textarea,select{font:inherit}
 .footer p,.footer a{color:rgba(255,255,255,.67);font-size:.9rem}
 .footer nav{display:grid;gap:9px}
 .footer-bottom{margin-top:52px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.45);font-size:.78rem}
+.compact-footer{padding:48px 0 22px}
+.compact-footer .footer-grid{align-items:start;gap:38px}
+.compact-footer .footer-logo{width:205px;margin-bottom:0}
+.compact-footer .footer-bottom{margin-top:34px;padding-top:18px}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .75s ease,transform .75s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -221,7 +244,7 @@ button,input,textarea,select{font:inherit}
 .hero-content{padding-bottom:70px}
 .split,.content-grid,.contact-grid,.details-wrap{grid-template-columns:1fr}
 .split-copy{padding:90px 24px}
-.split-image{min-height:420px}
+.split-image{min-height:420px;background-position:50% 43%}
 .cards{grid-template-columns:1fr}
 .card{min-height:450px}
 .process-grid{grid-template-columns:1fr 1fr}
@@ -233,6 +256,11 @@ button,input,textarea,select{font:inherit}
 .footer-grid>div:first-child{grid-column:1/-1}
 .project-card-visual{min-height:300px}
 .project-gallery{grid-template-columns:repeat(2,1fr)}
+.site-closing-image{min-height:380px}
+.site-closing-message{padding:72px 0}
+.process-expectations{padding:75px 0}
+.expectations-grid{grid-template-columns:1fr;gap:26px}
+.expectations-grid article{padding-top:20px}
 }
 
 @media(max-width:600px){.trust-strip-inner{min-height:auto;padding:20px 0;display:grid;gap:10px}
@@ -244,18 +272,27 @@ button,input,textarea,select{font:inherit}
 .hero-content{padding-bottom:62px}
 .section{padding:80px 0}
 .section-head,.gallery-heading{align-items:flex-start;flex-direction:column}
-.split-image{background-position:32% center}
+.split-image{background-position:50% 48%}
 .process-grid{grid-template-columns:1fr}
+.process-expectations{padding:62px 0}
+.process-expectations .section-title{margin-bottom:30px}
+.expectations-closing{margin-top:30px;font-size:1rem}
 .detail-grid{grid-template-columns:1fr}
 .detail-grid img{height:280px}
-.detail-image-stairs{object-position:62% 68%}
-.detail-image-fireplace{object-position:52% 53%}
-.detail-image-exterior{object-position:50% 64%}
+.detail-image-stairs{object-position:50% 65%}
+.detail-image-bath,.detail-image-fireplace{object-position:50% 50%}
+.detail-image-fireplace{object-fit:cover}
+.site-closing-image{min-height:300px}
+.homepage-closing-image{background-position:52% 50%}
+.site-closing-message{padding:62px 0}
+.site-closing-message p{margin:20px auto 26px;font-size:1rem}
 .standards,.form{grid-template-columns:1fr}
 .field.full{grid-column:auto}
 .footer-grid{grid-template-columns:1fr}
 .footer-bottom{flex-direction:column}
 .page-hero{padding:170px 0 80px}
+.process-page-hero h1{font-size:clamp(3.25rem,14vw,4.6rem);line-height:.94}
+.process-page-hero .hero-copy{margin-top:24px;font-size:1rem}
 .cta{min-height:390px}
 .project-cards,.project-gallery{grid-template-columns:1fr}
 .project-card-visual{min-height:270px}
