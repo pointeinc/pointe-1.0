@@ -61,11 +61,35 @@ if(supportingRoot&&portfolioSource){
 }
 
 if(portfolio&&portfolioSource){
-  const projectCard=(entry,index)=>`<a class="project-card" href="${entry.href}"><span class="project-card-visual project-cover-${(index%4)+1}" aria-hidden="true"><span>Project photography<br>coming soon</span></span><span class="project-card-content"><span class="project-number">${String(index+1).padStart(2,'0')}</span><span><strong>${entry.title}</strong><small>View project gallery <span aria-hidden="true">&rarr;</span></small></span></span></a>`;
-  const featured=portfolioSource.sections.find(section=>section.entries);
-  const categories=portfolioSource.sections.filter(section=>!section.entries);
-  const categoryCard=section=>`<a class="category-card" href="${section.href}"><span class="category-card-copy"><span class="eyebrow">${section.eyebrow}</span><strong>${section.title}</strong><span class="category-description">${section.description}</span><span class="category-link">View category gallery <span aria-hidden="true">&rarr;</span></span></span><span class="category-services"><span>Includes</span>${section.services.map(service=>`<span>${service}</span>`).join('')}</span></a>`;
-  portfolio.innerHTML=`<section class="section portfolio-section portfolio-featured"><div class="container"><div class="portfolio-section-head"><div><p class="eyebrow">${featured.eyebrow}</p><h2 class="section-title">${featured.title}</h2></div><p class="lead">${featured.description}</p></div><div class="project-cards">${featured.entries.map(projectCard).join('')}<article class="future-project-card"><span class="project-number">${String(featured.entries.length+1).padStart(2,'0')}</span><div><h3>${featured.futureLabel}</h3><p>${featured.futureDescription}</p><span class="future-label">Portfolio placeholder</span></div></article></div></div></section><section class="section portfolio-section portfolio-categories"><div class="container"><div class="portfolio-section-head"><div><p class="eyebrow">Project Collections</p><h2 class="section-title">Supporting Work</h2></div><p class="lead">Explore growing galleries of residential craftsmanship across four supporting categories.</p></div><div class="category-grid">${categories.map(categoryCard).join('')}</div></div></section>`;
+  const projectCard=(entry,index)=>`<a class="project-card" href="${entry.href}"><span class="project-card-visual project-cover-${(index%4)+1}${entry.cover?' has-cover':''}" aria-hidden="true">${entry.cover?`<img src="${entry.cover}" alt="" width="1200" height="1600" loading="lazy">`:'<span>Project photography<br>coming soon</span>'}</span><span class="project-card-content"><span class="project-number">${String(index+1).padStart(2,'0')}</span><span><strong>${entry.title}</strong><small>View project gallery <span aria-hidden="true">&rarr;</span></small></span></span></a>`;
+  const featured=portfolioSource.featured;
+  const workCategories={interior:'Interior',exterior:'Exterior',sitework:'Sitework',mechanical:'Mechanical'};
+  // Reuse the same project records and URLs as the existing individual galleries.
+  const moreProjects=Object.entries(portfolioSource.galleries).flatMap(([key,gallery])=>
+    (gallery.projects||[]).map(project=>({
+      ...project,
+      cover:typeof project.cover==='string'?{src:project.cover}:project.cover,
+      href:project.href||`project.html?category=${encodeURIComponent(key)}&project=${encodeURIComponent(project.slug)}`
+    }))
+  ).filter(project=>project.showInPortfolio&&project.cover?.src)
+    .sort((a,b)=>{
+      const dateA=Date.parse(a.date)||0,dateB=Date.parse(b.date)||0;
+      return dateB-dateA||(b.sortOrder||0)-(a.sortOrder||0)||a.title.localeCompare(b.title);
+    });
+  const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const moreProjectCard=project=>`<a class="more-work-card" data-work-category="${escapeHtml(project.category||'')}" href="${escapeHtml(project.href)}"><span class="more-work-cover"><img src="${escapeHtml(project.cover.src)}" alt="${escapeHtml(project.cover.alt||project.title)}" loading="lazy" width="800" height="600"></span><span class="more-work-copy"><strong>${escapeHtml(project.title)}</strong>${project.category?`<small>${escapeHtml(workCategories[project.category]||project.category)}</small>`:''}</span></a>`;
+  portfolio.innerHTML=`<section class="section portfolio-section portfolio-featured"><div class="container"><div class="portfolio-section-head"><div><p class="eyebrow">${featured.eyebrow}</p><h2 class="section-title">${featured.title}</h2></div><p class="lead">${featured.description}</p></div><div class="project-cards">${featured.entries.map(projectCard).join('')}<article class="future-project-card"><span class="project-number">${String(featured.entries.length+1).padStart(2,'0')}</span><div><h3>${featured.futureLabel}</h3><p>${featured.futureDescription}</p><span class="future-label">Portfolio placeholder</span></div></article></div></div></section><section class="section portfolio-section more-work" aria-labelledby="more-work-title"><div class="container"><div class="portfolio-section-head"><h2 class="section-title" id="more-work-title">More of Our Work</h2></div><div class="more-work-filters" role="group" aria-label="Filter projects"><button type="button" data-work-filter="all" aria-pressed="true">All</button>${Object.entries(workCategories).map(([value,label])=>`<button type="button" data-work-filter="${value}" aria-pressed="false">${label}</button>`).join('')}</div><div class="more-work-grid" id="more-work-grid">${moreProjects.map(moreProjectCard).join('')}</div><p class="more-work-empty" role="status"${moreProjects.length?' hidden':''}>More project photography coming soon.</p></div></section>`;
+  const workSection=portfolio.querySelector('.more-work');
+  const filterButtons=[...workSection.querySelectorAll('[data-work-filter]')];
+  const workCards=[...workSection.querySelectorAll('.more-work-card')];
+  const emptyMessage=workSection.querySelector('.more-work-empty');
+  filterButtons.forEach(button=>button.addEventListener('click',()=>{
+    const category=button.dataset.workFilter;
+    filterButtons.forEach(filter=>filter.setAttribute('aria-pressed',String(filter===button)));
+    workCards.forEach(card=>card.hidden=category!=='all'&&card.dataset.workCategory!==category);
+    emptyMessage.hidden=workCards.some(card=>!card.hidden);
+    emptyMessage.textContent=category==='all'?'More project photography coming soon.':'No projects in this category yet.';
+  }));
 }
 
 const corningPage=document.querySelector('[data-corning-case-study]');
