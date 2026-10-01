@@ -365,8 +365,8 @@ button,input,textarea,select{font:inherit}
 .corning-section-head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:55px}
 .corning-section-head>p{max-width:400px;margin:0;color:var(--muted)}
 .corning-gallery{display:grid;gap:18px}
-.corning-gallery-before{grid-template-columns:repeat(3,minmax(0,1fr))}
-.corning-gallery-before .corning-image{aspect-ratio:4/3}
+.corning-gallery-before{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.corning-gallery-before .corning-image{aspect-ratio:3/4}
 .corning-image{position:relative;min-width:0;padding:0;border:0;overflow:hidden;background:var(--charcoal);color:#fff;cursor:pointer}
 .corning-image img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
 .corning-image:hover img{transform:scale(1.025)}
@@ -384,7 +384,7 @@ button,input,textarea,select{font:inherit}
 .corning-stage-label span{display:block;margin-bottom:12px;color:var(--gold);font-size:.66rem;font-weight:700;letter-spacing:.14em}
 .corning-stage-label h3{margin:0;font:600 2rem/1 var(--serif)}
 .corning-stage-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.corning-stage-images .corning-image{aspect-ratio:4/3}
+.corning-stage-images .corning-image{aspect-ratio:3/4}
 .corning-video-wrap{margin-top:90px;padding-top:35px;border-top:1px solid rgba(255,255,255,.14)}
 .corning-video-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:28px}
 .corning-video-heading h3{margin:0;font:600 2.3rem var(--serif)}
@@ -476,3 +476,45 @@ button,input,textarea,select{font:inherit}
 .supporting-project-hero h1{font-size:clamp(3.7rem,18vw,5.4rem)}
 .supporting-story-placeholder{min-height:210px;padding:24px}
 }
+
+/* Corning photo viewer: full portraits, balanced margins, quiet controls. */
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox{display:block;padding:0;background:rgba(12,14,12,.97)}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox[hidden]{display:none}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-stage{position:absolute;inset:80px 104px;height:auto;min-width:0;min-height:0}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-stage figure{width:100%;height:100%;min-width:0;min-height:0;gap:0}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-stage figure img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 12px 48px rgba(0,0,0,.25)}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-stage figcaption{position:absolute;top:calc(100% + 12px);left:0;right:0;font-size:.7rem}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-control{position:absolute;top:50%;transform:translateY(-50%);margin:0;width:44px;height:44px;background:transparent;border-color:rgba(255,255,255,.18)}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-prev{left:24px}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-next{right:24px}
+@media(max-width:700px){.corning-gallery-before{gap:20px}}
+@media(max-width:600px){
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-stage{inset:100px 16px}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-control{top:auto;bottom:18px;transform:none}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-prev{left:20px}
+:is([data-corning-case-study],[data-project="greenhurst"]) .lightbox-next{right:20px}
+}
+@media(prefers-reduced-motion:reduce){.corning-image img{transition:none}.corning-image:hover img{transform:none}}
+
+/* Keep the finished collection's portrait photos intact in the existing grid. */
+.corning-gallery-finished .corning-image-portrait{grid-column:span 6;aspect-ratio:3/4}
+@media(max-width:700px){.corning-gallery-finished .corning-image-portrait{grid-column:1;aspect-ratio:3/4}}
+/* Quiet, persistent navigation for the Corning project story. */
+.corning-section-nav{position:sticky;top:80px;z-index:40;background:var(--cream);border-bottom:1px solid var(--line)}
+.corning-section-links{display:flex;align-items:center;gap:32px;overflow-x:auto;scrollbar-width:thin;padding-top:8px;padding-bottom:8px}
+.corning-section-links a{flex:0 0 auto;display:flex;align-items:center;min-height:44px;padding:8px 2px;font-size:.8rem;white-space:nowrap;text-underline-offset:7px;text-decoration-thickness:1px}
+.corning-section-links a:hover,.corning-section-links a[aria-current="location"]{color:var(--gold-dark);text-decoration-line:underline}
+.corning-section-links a:focus-visible{outline:2px solid var(--gold-dark);outline-offset:-2px}
+[data-corning-case-study] main>section[id]{scroll-margin-top:160px}
+@media(max-width:600px){.corning-section-links{gap:24px}}
+@media(prefers-reduced-motion:reduce){html:has([data-corning-case-study]){scroll-behavior:auto}}
+/* Greenhurst finished-home collection. */
+.greenhurst-hero{background-image:url('assets/projects/greenhurst/cover-photo.webp');background-position:center}
+.greenhurst-gallery-section{scroll-margin-top:160px}
+.greenhurst-gallery-section:nth-child(even){background:var(--paper)}
+.greenhurst-gallery-section .section-title{margin-bottom:38px}
+.greenhurst-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.greenhurst-photo-grid .gallery-item{aspect-ratio:4/3;height:auto}
+.greenhurst-photo-grid img{width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.greenhurst-photo-grid{grid-template-columns:1fr;gap:18px}}
+@media(prefers-reduced-motion:reduce){html:has([data-project="greenhurst"]){scroll-behavior:auto}}

@@ -46,7 +46,7 @@ if(supportingRoot&&portfolioSource){
     const gallery=allImages.length?allImages.map((image,index)=>{const label=image.caption||stageLabel(image.stage);return `<button class="supporting-story-image" type="button" data-supporting-image="${index}" aria-label="Open ${project.title} photo ${index+1}"><img src="${image.src}" alt="${image.alt||`${project.title} project photo`}" loading="lazy">${label?`<span>${label}</span>`:''}</button>`}).join(''):'<div class="supporting-story-placeholder"><span class="placeholder-mark" aria-hidden="true">P</span><strong>Project photography awaiting selection</strong></div>';
     const heroStyle=cover?.src?` style="--supporting-hero-image:url('${cover.src}')"`:'';
     const heroClass=cover?.src?' has-project-image':' is-project-placeholder';
-    supportingRoot.innerHTML=`<section class="supporting-project-hero${heroClass}"${heroStyle}><div class="container supporting-project-hero-copy"><a class="back-link" href="${data.href}"><span aria-hidden="true">&larr;</span> Back to ${data.title}</a><p class="eyebrow">${data.title}</p><h1>${project.title}</h1>${project.meta?`<p>${project.meta}</p>`:''}${cover?.src?'':'<span class="supporting-hero-placeholder">Project photography awaiting selection</span>'}</div></section><section class="section supporting-story-section"><div class="container"><div class="supporting-story-heading"><p class="eyebrow">Project Gallery</p><h2 class="section-title">The project, in pictures.</h2></div><div class="supporting-story-gallery" data-story-gallery>${gallery}</div></div></section><section class="cta"><div class="container cta-content"><h2>Let&rsquo;s build something worth coming home to.</h2><a class="btn btn-gold" href="contact.html">Start the Conversation <span aria-hidden="true">&rarr;</span></a></div></section>`;
+    supportingRoot.innerHTML=`<section class="supporting-project-hero${heroClass}"${heroStyle}><div class="container supporting-project-hero-copy"><a class="back-link" href="${data.href}"><span aria-hidden="true">&larr;</span> Back to ${data.title}</a><p class="eyebrow">${data.title}</p><h1>${project.title}</h1>${project.meta?`<p>${project.meta}</p>`:''}${cover?.src?'':'<span class="supporting-hero-placeholder">Project photography awaiting selection</span>'}</div></section><section class="section supporting-story-section"><div class="container"><div class="supporting-story-heading"><p class="eyebrow">Project Gallery</p><h2 class="section-title">The project, in pictures.</h2></div><div class="supporting-story-gallery" data-story-gallery>${gallery}</div></div></section>`;
     if(allImages.length){
       const root=document.querySelector('[data-lightbox-root]');let active=0,lastFocused=null,touchStart=0;
       root.innerHTML=`<div class="lightbox" role="dialog" aria-modal="true" aria-label="${project.title} image viewer" hidden><button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button><button class="lightbox-control lightbox-prev" type="button" aria-label="Previous image">&larr;</button><div class="lightbox-stage" aria-live="polite"></div><button class="lightbox-control lightbox-next" type="button" aria-label="Next image">&rarr;</button><p class="lightbox-count"></p></div>`;
@@ -78,7 +78,7 @@ if(portfolio&&portfolioSource){
     });
   const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const moreProjectCard=project=>`<a class="more-work-card" data-work-category="${escapeHtml(project.category||'')}" href="${escapeHtml(project.href)}"><span class="more-work-cover"><img src="${escapeHtml(project.cover.src)}" alt="${escapeHtml(project.cover.alt||project.title)}" loading="lazy" width="800" height="600"></span><span class="more-work-copy"><strong>${escapeHtml(project.title)}</strong>${project.category?`<small>${escapeHtml(workCategories[project.category]||project.category)}</small>`:''}</span></a>`;
-  portfolio.innerHTML=`<section class="section portfolio-section portfolio-featured"><div class="container"><div class="portfolio-section-head"><div><p class="eyebrow">${featured.eyebrow}</p><h2 class="section-title">${featured.title}</h2></div><p class="lead">${featured.description}</p></div><div class="project-cards">${featured.entries.map(projectCard).join('')}<article class="future-project-card"><span class="project-number">${String(featured.entries.length+1).padStart(2,'0')}</span><div><h3>${featured.futureLabel}</h3><p>${featured.futureDescription}</p><span class="future-label">Portfolio placeholder</span></div></article></div></div></section><section class="section portfolio-section more-work" aria-labelledby="more-work-title"><div class="container"><div class="portfolio-section-head"><h2 class="section-title" id="more-work-title">More of Our Work</h2></div><div class="more-work-filters" role="group" aria-label="Filter projects"><button type="button" data-work-filter="all" aria-pressed="true">All</button>${Object.entries(workCategories).map(([value,label])=>`<button type="button" data-work-filter="${value}" aria-pressed="false">${label}</button>`).join('')}</div><div class="more-work-grid" id="more-work-grid">${moreProjects.map(moreProjectCard).join('')}</div><p class="more-work-empty" role="status"${moreProjects.length?' hidden':''}>More project photography coming soon.</p></div></section>`;
+  portfolio.innerHTML=`<section class="section portfolio-section portfolio-featured"><div class="container"><div class="portfolio-section-head"><div><p class="eyebrow">${featured.eyebrow}</p><h2 class="section-title">${featured.title}</h2></div><p class="lead">${featured.description}</p></div><div class="project-cards">${featured.entries.map(projectCard).join('')}</div></div></section><section class="section portfolio-section more-work" aria-labelledby="more-work-title"><div class="container"><div class="portfolio-section-head"><h2 class="section-title" id="more-work-title">More of Our Work</h2></div><div class="more-work-filters" role="group" aria-label="Filter projects"><button type="button" data-work-filter="all" aria-pressed="true">All</button>${Object.entries(workCategories).map(([value,label])=>`<button type="button" data-work-filter="${value}" aria-pressed="false">${label}</button>`).join('')}</div><div class="more-work-grid" id="more-work-grid">${moreProjects.map(moreProjectCard).join('')}</div><p class="more-work-empty" role="status"${moreProjects.length?' hidden':''}>More project photography coming soon.</p></div></section>`;
   const workSection=portfolio.querySelector('.more-work');
   const filterButtons=[...workSection.querySelectorAll('[data-work-filter]')];
   const workCards=[...workSection.querySelectorAll('.more-work-card')];
@@ -114,7 +114,7 @@ if(corningPage&&corningData){
   const imageButton=(image,layout='')=>{
     const index=lightboxItems.push(image)-1;
     const label=image.caption||image.stage||`Corning Project photo ${index+1}`;
-    return `<button class="corning-image ${layout?`corning-image-${layout}`:''}" type="button" data-case-image-index="${index}" aria-label="Open ${label}"><img src="${image.src}" alt="${image.alt||label}" loading="lazy">${image.caption?`<span>${image.caption}</span>`:''}</button>`;
+    return `<button class="corning-image ${layout?`corning-image-${layout}`:''}" type="button" data-case-image-index="${index}" aria-label="Open ${label}"><img src="${image.src}" alt="${image.alt||label}" loading="lazy"></button>`;
   };
   const placeholder=label=>`<div class="corning-section-placeholder"><span class="placeholder-mark" aria-hidden="true">P</span><strong>${label}</strong><p>Optimized local photography awaiting selection.</p></div>`;
 
@@ -136,9 +136,6 @@ if(corningPage&&corningData){
 
   const finished=document.querySelector('[data-corning-gallery="finished"]');
   finished.innerHTML=corningData.finished.length?corningData.finished.map((image,index)=>imageButton(image,image.layout||(index%6===0?'feature':index%6===3||index%6===4?'third':'half'))).join(''):placeholder('Finished-home photography');
-
-  const details=document.querySelector('[data-corning-gallery="details"]');
-  details.innerHTML=corningData.details.length?corningData.details.map(image=>imageButton(image)).join(''):placeholder('Craftsmanship details');
 
   const videoWrap=document.querySelector('[data-corning-videos]');
   if(corningData.videos.length){
@@ -178,12 +175,15 @@ if(gallery&&galleryData){
   let lastFocused=null;
   const lightboxRoot=document.querySelector('[data-lightbox-root]');
 
-  gallery.innerHTML=items.map((image,index)=>{
+  const galleryImage=(image,index)=>{
     const number=String(index+1).padStart(2,'0');
     if(image)return `<button class="gallery-item" type="button" data-gallery-index="${index}" aria-label="Open ${galleryData.title} photo ${index+1} of ${items.length}"><img src="${image.src}" alt="${image.alt||`${galleryData.title} photo ${index+1}`}" loading="lazy">${image.projectLabel?`<span class="gallery-item-label">${image.projectLabel}</span>`:''}<span class="gallery-item-count">${number}</span></button>`;
     return `<button class="gallery-item gallery-placeholder" type="button" data-gallery-index="${index}" aria-label="Open photography placeholder ${index+1} of ${items.length}"><span class="placeholder-mark" aria-hidden="true">P</span><span><strong>Photo ${number}</strong><small>Photography placeholder</small></span></button>`;
-  }).join('');
+  };
 
+  if(galleryData.sections){
+    gallery.innerHTML=galleryData.sections.map(section=>`<section class="section greenhurst-gallery-section" id="${section.id}" aria-labelledby="${section.id}-heading"><div class="container"><h2 class="section-title" id="${section.id}-heading">${section.title}</h2><div class="greenhurst-photo-grid">${items.map((image,index)=>image.section===section.id?`<button class="gallery-item" type="button" data-gallery-index="${index}" aria-label="Open ${image.alt}"><img src="${image.src}" alt="${image.alt}" loading="lazy"></button>`:'').join('')}</div></div></section>`).join('');
+  }else gallery.innerHTML=items.map(galleryImage).join('');
   lightboxRoot.innerHTML=`<div class="lightbox" role="dialog" aria-modal="true" aria-label="${galleryData.title} image viewer" hidden><button class="lightbox-close" type="button" aria-label="Close image viewer">×</button><button class="lightbox-control lightbox-prev" type="button" aria-label="Previous image">←</button><div class="lightbox-stage" aria-live="polite"></div><button class="lightbox-control lightbox-next" type="button" aria-label="Next image">→</button><p class="lightbox-count"></p></div>`;
   const lightbox=lightboxRoot.querySelector('.lightbox');
   const stage=lightbox.querySelector('.lightbox-stage');
@@ -208,3 +208,22 @@ if(gallery&&galleryData){
   document.addEventListener('keydown',event=>{if(lightbox.hidden)return;if(event.key==='Escape')closeLightbox();if(event.key==='ArrowLeft')move(-1);if(event.key==='ArrowRight')move(1);if(event.key==='Tab'){const controls=[closeButton,lightbox.querySelector('.lightbox-prev'),lightbox.querySelector('.lightbox-next')];const position=controls.indexOf(document.activeElement);if(event.shiftKey&&position===0){event.preventDefault();controls.at(-1).focus();}else if(!event.shiftKey&&position===controls.length-1){event.preventDefault();controls[0].focus();}}});
 }
 
+
+if(document.querySelector('.corning-section-links')){
+  const sectionLinks=[...document.querySelectorAll('.corning-section-links a')];
+  const sectionTargets=sectionLinks.map(link=>document.querySelector(link.hash));
+  let sectionUpdatePending=false;
+  const updateSectionNav=()=>{
+    let active=0;
+    sectionTargets.forEach((section,index)=>{if(section?.getBoundingClientRect().top<=170)active=index;});
+    sectionLinks.forEach((link,index)=>{
+      if(index===active)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+    sectionUpdatePending=false;
+  };
+  window.addEventListener('scroll',()=>{
+    if(!sectionUpdatePending){sectionUpdatePending=true;requestAnimationFrame(updateSectionNav);}
+  },{passive:true});
+  updateSectionNav();
+}

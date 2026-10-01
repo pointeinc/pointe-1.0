@@ -22,10 +22,8 @@ const portfolioData = {
     description: 'Individual galleries for larger custom homes, whole-home renovations, and flagship projects.',
     entries: [
       { title: 'Corning Project', href: 'corning-project.html', galleryKey: 'corning', cover: 'assets/projects/corning/finished/cover-photo.webp' },
-      { title: 'Greenhurst Project', href: 'greenhurst-project.html', galleryKey: 'greenhurst' }
-    ],
-    futureLabel: 'Future featured homes',
-    futureDescription: 'Additional large custom homes, whole-home renovations, and flagship projects will be added here as verified work becomes available.'
+      { title: 'Greenhurst Project', href: 'greenhurst-project.html', galleryKey: 'greenhurst', cover: 'assets/projects/greenhurst/cover-photo.webp' }
+    ]
   },
   galleries: {
     // Corning stills: { src, alt, caption?, stage?, layout? }.
@@ -37,10 +35,54 @@ const portfolioData = {
       location: 'Corning, New York',
       projectType: 'Major residential transformation / whole-home renovation',
       introduction: 'The Corning Project is a major residential transformation in Corning, New York. The work is presented as a progression from the original home through construction and into the finished spaces, with an emphasis on the decisions and craftsmanship that bring a whole home together.',
-      hero: null,
-      before: [],
-      during: [],
-      finished: [],
+      hero: { src: 'assets/projects/corning/finished/cover-photo.webp', alt: 'Finished Corning home with blue siding, white trim, and a front porch' },
+      before: [
+        { src: 'assets/projects/corning/before/img_1556.webp', alt: 'Corning home viewed from the street, with weathered siding and a steep front gable', caption: 'Street view' },
+        { src: 'assets/projects/corning/before/img_1288.webp', alt: 'Front of the Corning home with weathered siding and steps leading to the entrance', caption: 'Front exterior' },
+        { src: 'assets/projects/corning/before/img_1059.webp', alt: 'Side of the Corning home showing weathered siding, windows, and a projecting bay', caption: 'Side exterior' },
+        { src: 'assets/projects/corning/before/img_1058.webp', alt: 'Rear of the Corning home with open wall sections and debris in the yard', caption: 'Rear exterior' },
+        { src: 'assets/projects/corning/before/img_0775.webp', alt: 'Stripped Corning interior with exposed ceiling joists, wall framing, and floorboards', caption: 'Interior framing' },
+        { src: 'assets/projects/corning/before/img_1053.webp', alt: 'Corning interior with exposed ceiling joists, an arched opening, and debris on the floor', caption: 'Interior with arched opening' }
+      ],
+      during: [
+        { src: 'assets/projects/corning/during/img_1711.webp', alt: 'Corning project: home supported on timber cribbing during foundation work', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_1739.webp', alt: 'Corning project: concrete block foundation wall beside timber supports', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_1754.webp', alt: 'Corning project: coated foundation wall beside timber cribbing', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_1803.webp', alt: 'Corning project: foundation work beneath the supported home', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_1804.webp', alt: 'Corning project: wrapped exterior above temporary timber supports', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_1967.webp', alt: 'Corning project: excavation equipment beneath the raised home', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_2079.webp', alt: 'Corning project: excavated lower level with support posts and exposed framing', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_2310.webp', alt: 'Corning project: lower-level floor reinforcement before concrete placement', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_2330.webp', alt: 'Corning project: new concrete floor beneath exposed ceiling joists', stage: 'Foundation & Lower Level' },
+        { src: 'assets/projects/corning/during/img_3324.webp', alt: 'Corning project: blue siding along the side of the home', stage: 'Exterior Progress' },
+        { src: 'assets/projects/corning/during/img_3366.webp', alt: 'Corning project: front porch framing beneath the front gable', stage: 'Exterior Progress' },
+        { src: 'assets/projects/corning/during/img_3367.webp', alt: 'Corning project: side exterior with siding and remaining house wrap', stage: 'Exterior Progress' },
+        { src: 'assets/projects/corning/during/img_3465.webp', alt: 'Corning project: lift beside the porch and unfinished upper exterior', stage: 'Exterior Progress' },
+        { src: 'assets/projects/corning/during/img_3468.webp', alt: 'Corning project: front exterior with blue siding and porch framing', stage: 'Exterior Progress' },
+        { src: 'assets/projects/corning/during/img_3498.webp', alt: 'Corning project: exterior siding and ongoing porch work', stage: 'Exterior Progress' },
+        { src: 'assets/projects/corning/during/img_3743.webp', alt: 'Corning project: interior wall insulation beneath ceiling framing', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4034.webp', alt: 'Corning project: drywall with taped seams and construction tools', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4036.webp', alt: 'Corning project: interior drywall and ceiling work with ladders', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4058.webp', alt: 'Corning project: interior room during drywall finishing', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4106.webp', alt: 'Corning project: painted interior with ceiling openings and finish work', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4131.webp', alt: 'Corning project: interior flooring work and building materials', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4235.webp', alt: 'Corning project: tile floor installation in a narrow interior space', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4281.webp', alt: 'Corning project: floor preparation around plumbing connections', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4387.webp', alt: 'Corning project: kitchen cabinetry and countertops during finish work', stage: 'Interior Progress' },
+        { src: 'assets/projects/corning/during/img_4395.webp', alt: 'Corning project: staircase with wood handrail and dark balusters during finish work', stage: 'Interior Progress' }
+      ],
+      finished: [
+        { src: 'assets/projects/corning/finished/cover-photo.webp', alt: 'Finished Corning home with blue siding, white trim, and a front porch', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4936.webp', alt: 'Finished deck with gray boards, outdoor seating, and white railing', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4979.webp', alt: 'Corning kitchen with dark cabinetry, a light countertop island, and pendant lights', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4982.webp', alt: 'Corning living room with a fireplace surround, television, and adjacent staircase', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4983.webp', alt: 'Finished staircase with white trim, wood handrail, and dark balusters', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4984.webp', alt: 'Corning bathroom with a dark vanity, white sink, mirror, and toilet', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4985.webp', alt: 'Finished hallway with a white sliding barn door and wood-look flooring', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4986.webp', alt: 'Laundry area with stacked appliances, a window, and an adjoining vanity', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4987.webp', alt: 'Corning bathroom with a dark tiled shower, glass enclosure, and light floor tile', layout: 'portrait' },
+        { src: 'assets/projects/corning/finished/img_4988.webp', alt: 'Finished bedroom with recessed lighting, gray walls, a window, and a crib', layout: 'portrait' }
+      ],
       details: [],
       videos: []
     },
@@ -48,9 +90,34 @@ const portfolioData = {
       type: 'project',
       title: 'Greenhurst Project',
       eyebrow: 'Featured Home',
-      status: 'Project details and verified photography coming soon.',
-      placeholderCount: 6,
-      images: []
+      sections: [
+        { id: 'exterior', title: 'Exterior & Porch' },
+        { id: 'living', title: 'Living Spaces' },
+        { id: 'kitchen', title: 'Kitchen' },
+        { id: 'bedrooms', title: 'Bedrooms & Hall' },
+        { id: 'bathrooms', title: 'Bathrooms' }
+      ],
+      images: [
+        { src: 'assets/projects/greenhurst/cover-photo.webp', alt: 'Aerial view of the Greenhurst home and surrounding lawn', section: 'exterior' },
+        { src: 'assets/projects/greenhurst/photo-18.webp', alt: 'Greenhurst home viewed across the front lawn', section: 'exterior' },
+        { src: 'assets/projects/greenhurst/photo-17.webp', alt: 'Timber-framed entrance porch with stone piers', section: 'exterior' },
+        { src: 'assets/projects/greenhurst/photo-15.webp', alt: 'Covered porch with timber ceiling and wood entrance door', section: 'exterior' },
+        { src: 'assets/projects/greenhurst/photo-16.webp', alt: 'Timber porch framing overlooking the lawn', section: 'exterior' },
+        { src: 'assets/projects/greenhurst/photo-01.webp', alt: 'Aerial view of the neighborhood and nearby water', section: 'exterior' },
+        { src: 'assets/projects/greenhurst/photo-06.webp', alt: 'Open living space with wood entrance door and stone fireplace', section: 'living' },
+        { src: 'assets/projects/greenhurst/photo-05.webp', alt: 'Stone fireplace with wood mantel', section: 'living' },
+        { src: 'assets/projects/greenhurst/photo-02.webp', alt: 'Living room with seating, ceiling fan, and sliding glass door', section: 'living' },
+        { src: 'assets/projects/greenhurst/photo-14.webp', alt: 'Kitchen with dark cabinetry, wood island countertop, and stainless appliances', section: 'kitchen' },
+        { src: 'assets/projects/greenhurst/photo-12.webp', alt: 'Kitchen sink beneath a window with dark cabinetry', section: 'kitchen' },
+        { src: 'assets/projects/greenhurst/photo-13.webp', alt: 'Kitchen island looking toward the living space', section: 'kitchen' },
+        { src: 'assets/projects/greenhurst/photo-04.webp', alt: 'Finished room with two windows and wood-look flooring', section: 'bedrooms' },
+        { src: 'assets/projects/greenhurst/photo-08.webp', alt: 'Finished room with a window and recessed lights', section: 'bedrooms' },
+        { src: 'assets/projects/greenhurst/photo-09.webp', alt: 'Bedroom with closet and wood-look flooring', section: 'bedrooms' },
+        { src: 'assets/projects/greenhurst/photo-10.webp', alt: 'Bedroom viewed toward the doorway', section: 'bedrooms' },
+        { src: 'assets/projects/greenhurst/photo-11.webp', alt: 'Hallway connecting the interior rooms', section: 'bedrooms' },
+        { src: 'assets/projects/greenhurst/photo-03.webp', alt: 'Bathroom vanity and glass-enclosed tiled shower', section: 'bathrooms' },
+        { src: 'assets/projects/greenhurst/photo-07.webp', alt: 'Bathroom vanity, toilet, and window', section: 'bathrooms' }
+      ]
     },
     renovations: {
       type: 'category', title: 'Renovations & Additions', eyebrow: 'Project Collection', href: 'renovations-additions.html',
