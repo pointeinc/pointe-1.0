@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#232622"/>
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#cba55e" stroke-opacity=".3"/>
+  <path d="M400 130 465 195 400 260 335 195Z" fill="none" stroke="#cba55e"/>
+  <g text-anchor="middle" font-family="Arial, sans-serif">
+    <text x="400" y="335" fill="#cba55e" font-size="20" letter-spacing="3">DEVELOPMENT PLACEHOLDER</text>
+    <text x="400" y="377" fill="#e6e3da" font-size="18">Project photography coming soon</text>
+  </g>
+</svg>

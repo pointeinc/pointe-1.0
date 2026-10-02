@@ -71,7 +71,8 @@ if(portfolio&&portfolioSource){
       cover:typeof project.cover==='string'?{src:project.cover}:project.cover,
       href:project.href||`project.html?category=${encodeURIComponent(key)}&project=${encodeURIComponent(project.slug)}`
     }))
-  ).filter(project=>project.showInPortfolio&&project.cover?.src)
+  ).concat(Object.values(portfolioSource.groups||{}))
+    .filter(project=>project.showInPortfolio&&project.cover?.src)
     .sort((a,b)=>{
       const dateA=Date.parse(a.date)||0,dateB=Date.parse(b.date)||0;
       return dateB-dateA||(b.sortOrder||0)-(a.sortOrder||0)||a.title.localeCompare(b.title);

@@ -15,6 +15,26 @@
 //   images: [{ src: 'assets/job-cover.webp', alt: 'Finished job description', stage: 'finished' }] }
 // Existing unverified placeholders stay off the Work grid until populated.
 const portfolioData = {
+  // Group cards link to project indexes, not individual job galleries.
+  // Add verified jobs to each group's projects array:
+  // { title, cover: { src, alt }, date?: 'YYYY-MM-DD', href }.
+  // Add another group here and a page with its data-project-group key to reuse the index.
+  groups: {
+    'well-connects': {
+      type: 'group', title: 'Well Connects', category: 'mechanical',
+      date: null, sortOrder: 0, showInPortfolio: true,
+      href: 'well-connects.html',
+      cover: { src: 'assets/mechanical-group-placeholder.svg', alt: 'Development placeholder: project photography coming soon' },
+      projects: []
+    },
+    'air-source-heat-pumps': {
+      type: 'group', title: 'Air Source Heat Pumps', category: 'mechanical',
+      date: null, sortOrder: 0, showInPortfolio: true,
+      href: 'air-source-heat-pumps.html',
+      cover: { src: 'assets/mechanical-group-placeholder.svg', alt: 'Development placeholder: project photography coming soon' },
+      projects: []
+    }
+  },
   featured: {
     key: 'featured-homes',
     eyebrow: 'Signature Work',
@@ -132,6 +152,51 @@ const portfolioData = {
       type: 'category', title: 'Exterior Craftsmanship', eyebrow: 'Project Collection', href: 'exterior-craftsmanship.html',
       status: 'Individual exterior projects with the finished result and the work behind it.',
       projects: [
+        {
+          slug: 'tioga-siding', title: 'Tioga Siding', category: 'exterior',
+          // Latest dated project photo; finished WebP views have no capture-date metadata.
+          date: '2025-11-15', sortOrder: 0, showInPortfolio: true,
+          href: 'project.html?category=exteriors&project=tioga-siding',
+          cover: { src: 'assets/projects/exterior/tioga-siding/cover.webp', alt: 'Finished Tioga home with blue siding, white trim, and a wraparound porch' },
+          images: [
+            { src: 'assets/projects/exterior/tioga-siding/0505d61e22b81754601a3391b2417b81.webp', alt: 'Aerial rear view of the finished Tioga home with blue siding and white porch railings' },
+            { src: 'assets/projects/exterior/tioga-siding/88bd758b611cb838359a41baa0696f53.webp', alt: 'Finished Tioga front exterior with blue siding and a covered porch viewed from the street' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5785.webp', alt: 'Original Tioga side exterior with weathered white siding' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5786.webp', alt: 'Original Tioga front exterior and porch framing before siding replacement' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5787.webp', alt: 'Tioga porch and white siding before exterior renovation' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5873.webp', alt: 'Blue siding installed around the Tioga rear entrance during construction' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5890.webp', alt: 'Finished blue siding along the Tioga side wall and driveway' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5891.webp', alt: 'Tioga front gable with blue siding and the covered porch' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5892.webp', alt: 'Tioga rear gable with blue siding and white window trim' },
+            { src: 'assets/projects/exterior/tioga-siding/img-5894.webp', alt: 'Tioga porch with white railing beneath the finished blue exterior' }
+          ]
+        },
+        {
+          slug: 'canaseraga-siding', title: 'Canaseraga Siding', category: 'exterior',
+          // Latest dated project photo; the cover has no capture-date metadata.
+          date: '2025-09-10', sortOrder: 0, showInPortfolio: true,
+          href: 'project.html?category=exteriors&project=canaseraga-siding',
+          cover: { src: 'assets/projects/exterior/canaseraga-siding/cover.webp', alt: 'Canaseraga home with green siding and a stone-faced lower exterior' },
+          images: [
+            { src: 'assets/projects/exterior/canaseraga-siding/img-5393.webp', alt: 'Canaseraga exterior during renovation with stone facing beneath wrapped upper walls' },
+            { src: 'assets/projects/exterior/canaseraga-siding/img-5413.webp', alt: 'Green siding installation beneath the Canaseraga covered porch' },
+            { src: 'assets/projects/exterior/canaseraga-siding/img-5416.webp', alt: 'Canaseraga corner with newly installed green siding and house wrap above' },
+            { src: 'assets/projects/exterior/canaseraga-siding/img-5455.webp', alt: 'Canaseraga gable during green siding installation beside the front porch' },
+            { src: 'assets/projects/exterior/canaseraga-siding/img-5461.webp', alt: 'Canaseraga side exterior with stone facing and white-trimmed windows' },
+            { src: 'assets/projects/exterior/canaseraga-siding/img-5467.webp', alt: 'Canaseraga porch with green siding around the entrance beneath exposed roof framing' }
+          ]
+        },
+        {
+          slug: 'hunter-hill-siding', title: 'Hunter Hill Siding', category: 'exterior',
+          // Cover capture date; the other supplied photos have no capture-date metadata.
+          date: '2023-06-28', sortOrder: 0, showInPortfolio: true,
+          href: 'project.html?category=exteriors&project=hunter-hill-siding',
+          cover: { src: 'assets/projects/exterior/hunter-hill-siding/cover.webp', alt: 'Hunter Hill home with brown shingle-style siding and white trim beside the driveway' },
+          images: [
+            { src: 'assets/projects/exterior/hunter-hill-siding/img-9206.webp', alt: 'Hunter Hill exterior during siding replacement with house wrap and ladders beside the entrance' },
+            { src: 'assets/projects/exterior/hunter-hill-siding/img-9253.webp', alt: 'Hunter Hill brown siding and white trim during installation around the porch and garage' }
+          ]
+        },
         {
           slug: 'jasper-siding', title: 'Jasper Siding', category: 'exterior',
           // Latest dated project photo; the cover has no capture-date metadata.

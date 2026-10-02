@@ -1,0 +1,8 @@
+/* Shared group index layout; existing portfolio and gallery pages are unaffected. */
+.group-project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:42px 26px}
+.group-development-placeholder:hover strong{color:inherit}
+.group-index-section{padding-bottom:120px}
+.group-empty{margin:0 0 32px;color:var(--muted)}
+.group-empty[hidden]{display:none}
+@media(max-width:900px){.group-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.group-index-section{padding-bottom:100px}}
+@media(max-width:600px){.group-project-grid{grid-template-columns:1fr;gap:34px}.group-index-section{padding-bottom:80px}}
