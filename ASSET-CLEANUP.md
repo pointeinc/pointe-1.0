@@ -73,3 +73,8 @@ No remaining asset exceeds 1.05 MB. No videos, MP4s, PDFs, or screenshot/temp fi
 - Gallery/lightbox JavaScript behavior was not modified; only the identical-image reference in projects.js changed.
 - Browser interaction was not exercised in this environment; validation was static plus image decoding.
 - Nothing was committed, pushed, or deployed.
+## Additional portfolio compression - October 1, 2026
+
+After the additional exterior galleries were added, assets totaled 35,683,215 bytes. Recompressed 72 larger WebP photos at quality 74, fitting within 1400 x 1400 pixels without upscaling and stripping metadata. Only smaller outputs replaced originals. Asset paths, project records, gallery order, and captions are preserved.
+
+Assets now total 18,596,443 bytes, a reduction of 17,086,772 bytes (47.9%). The complete website is approximately 18.78 MB excluding Git history. All WebP images decode successfully; all executable image references resolve. The nonexistent job-cover.webp path is still only a commented example.
