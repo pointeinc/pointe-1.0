@@ -133,6 +133,31 @@ const portfolioData = {
       status: 'Individual exterior projects with the finished result and the work behind it.',
       projects: [
         {
+          slug: 'jasper-siding', title: 'Jasper Siding', category: 'exterior',
+          // Latest dated project photo; the cover has no capture-date metadata.
+          date: '2025-07-11', sortOrder: 0, showInPortfolio: true,
+          href: 'project.html?category=exteriors&project=jasper-siding',
+          cover: { src: 'assets/projects/exterior/jasper-siding/cover.webp', alt: 'Jasper home with blue siding, white trim, and a covered porch' },
+          images: [
+            { src: 'assets/projects/exterior/jasper-siding/img-4923.webp', alt: 'Jasper front porch during siding work, with exposed house wrap on the upper exterior' },
+            { src: 'assets/projects/exterior/jasper-siding/img-4924.webp', alt: 'Jasper side exterior during siding installation beside a covered entrance' },
+            { src: 'assets/projects/exterior/jasper-siding/img-4997.webp', alt: 'Jasper porch with wood railing beneath upper walls wrapped for siding installation' },
+            { src: 'assets/projects/exterior/jasper-siding/img-4999.webp', alt: 'Blue siding and white trim installed around the Jasper front porch' }
+          ]
+        },
+        {
+          slug: 'corning-poolhouse', title: 'Corning Poolhouse', category: 'exterior',
+          // Latest dated project photo; the cover has no capture-date metadata.
+          date: '2024-09-12', sortOrder: 0, showInPortfolio: true,
+          href: 'project.html?category=exteriors&project=corning-poolhouse',
+          cover: { src: 'assets/projects/exterior/corning-poolhouse/cover.webp', alt: 'Corning poolhouse with dark siding beside a fenced swimming pool' },
+          images: [
+            { src: 'assets/projects/exterior/corning-poolhouse/img-2837.webp', alt: 'Corning poolhouse with dark vertical siding, white-trimmed windows, and a shingled roof' },
+            { src: 'assets/projects/exterior/corning-poolhouse/img-2838.webp', alt: 'Corning poolhouse entrance with glazed doors beside the concrete pool deck' },
+            { src: 'assets/projects/exterior/corning-poolhouse/img-3003.webp', alt: 'Corning poolhouse gable and windows viewed beside the pool fence' }
+          ]
+        },
+        {
           slug: 'canisteo', category: 'exterior', title: 'Canisteo Project',
           // Finished-photo capture date; category can be changed independently of this URL.
           date: '2023-10-23', sortOrder: 0,
