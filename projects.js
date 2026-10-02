@@ -132,6 +132,21 @@ const portfolioData = {
       type: 'category', title: 'Exterior Craftsmanship', eyebrow: 'Project Collection', href: 'exterior-craftsmanship.html',
       status: 'Individual exterior projects with the finished result and the work behind it.',
       projects: [
+        {
+          slug: 'canisteo', category: 'exterior', title: 'Canisteo Project',
+          // Finished-photo capture date; category can be changed independently of this URL.
+          date: '2023-10-23', sortOrder: 0,
+          href: 'project.html?category=exteriors&project=canisteo',
+          showInPortfolio: true,
+          cover: { src: 'assets/projects/exterior/canisteo/cover.webp', alt: 'Canisteo home with blue siding, white trim, and a covered front porch' },
+          images: [
+            { src: 'assets/projects/exterior/canisteo/img-0126.webp', alt: 'Canisteo side entrance during siding installation' },
+            { src: 'assets/projects/exterior/canisteo/img-0149.webp', alt: 'Canisteo exterior with blue siding and exposed house wrap during construction' },
+            { src: 'assets/projects/exterior/canisteo/img-0553.webp', alt: 'Canisteo front porch and entrance with white railing and blue siding' },
+            { src: 'assets/projects/exterior/canisteo/img-0555.webp', alt: 'Canisteo side gable and bay window with blue siding and white trim' },
+            { src: 'assets/projects/exterior/canisteo/img-0556.webp', alt: 'Completed Canisteo side entrance and adjoining exterior' }
+          ]
+        },
         { slug: 'siding-project-01', category: 'exterior', date: null, title: 'Siding Project 01', cover: null, images: [] },
         { slug: 'deck-project-01', category: 'exterior', date: null, title: 'Deck Project 01', cover: null, images: [] },
         { slug: 'exterior-renovation-01', category: 'exterior', date: null, title: 'Exterior Renovation 01', cover: null, images: [] }
