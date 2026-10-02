@@ -100,7 +100,7 @@ const portfolioData = {
       images: [
         { src: 'assets/projects/greenhurst/cover-photo.webp', alt: 'Aerial view of the Greenhurst home and surrounding lawn', section: 'exterior' },
         { src: 'assets/projects/greenhurst/photo-18.webp', alt: 'Greenhurst home viewed across the front lawn', section: 'exterior' },
-        { src: 'assets/projects/greenhurst/photo-17.webp', alt: 'Timber-framed entrance porch with stone piers', section: 'exterior' },
+        { src: 'assets/homepage-hero-finished-exterior.webp', alt: 'Timber-framed entrance porch with stone piers', section: 'exterior' },
         { src: 'assets/projects/greenhurst/photo-15.webp', alt: 'Covered porch with timber ceiling and wood entrance door', section: 'exterior' },
         { src: 'assets/projects/greenhurst/photo-16.webp', alt: 'Timber porch framing overlooking the lawn', section: 'exterior' },
         { src: 'assets/projects/greenhurst/photo-01.webp', alt: 'Aerial view of the neighborhood and nearby water', section: 'exterior' },

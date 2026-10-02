@@ -104,14 +104,14 @@ button,input,textarea,select{font:inherit}
 .detail-image-bath{object-position:55% 50%}
 .detail-image-fireplace{object-fit:contain;object-position:50% 50%}
 
-.cta{position:relative;min-height:450px;display:flex;align-items:center;background:url('assets/cta.jpg') center/cover no-repeat;color:#fff}
+.cta{position:relative;min-height:450px;display:flex;align-items:center;background:url('assets/cta.webp') center/cover no-repeat;color:#fff}
 .cta:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.78),rgba(10,10,9,.15))}
 .cta-content{position:relative;z-index:1}
 .cta h2{max-width:760px;margin:0 0 30px;font:600 clamp(3rem,6vw,5.8rem)/.92 var(--serif);letter-spacing:-.04em}
 
 .site-closing-image{min-height:450px;background-position:center;background-size:cover;background-repeat:no-repeat}
 .homepage-closing-image{background-image:url('assets/greenhurst-entrance-2.webp');background-position:50% 44%}
-.default-closing-image{background-image:url('assets/cta.jpg')}
+.default-closing-image{background-image:url('assets/cta.webp')}
 .site-closing-message{padding:82px 0;text-align:center;background:var(--cream)}
 .site-closing-message>div{max-width:860px}
 .site-closing-message h2{margin:0;font:600 clamp(2.8rem,5vw,4.8rem)/.96 var(--serif);letter-spacing:-.035em}
