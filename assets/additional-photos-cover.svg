@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#232622"/>
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#cba55e" stroke-opacity=".3"/>
+  <g fill="none" stroke="#cba55e" stroke-width="2">
+    <rect x="348" y="150" width="104" height="80" rx="4"/>
+    <circle cx="375" cy="174" r="7"/>
+    <path d="m349 214 29-27 25 20 22-18 26 25"/>
+  </g>
+  <g text-anchor="middle" font-family="Arial, sans-serif">
+    <text x="400" y="320" fill="#e6e3da" font-size="26" letter-spacing="3">ADDITIONAL PHOTOS</text>
+    <text x="400" y="366" fill="#cba55e" font-size="16" letter-spacing="2">VIEW GALLERY</text>
+  </g>
+</svg>

@@ -246,8 +246,126 @@ const portfolioData = {
       type: 'category', title: 'Sitework & Excavation', eyebrow: 'Project Collection', href: 'sitework-excavation.html',
       status: 'Individual residential sitework and excavation projects presented in clear project sequences.',
       projects: [
-        { slug: 'excavation-project-01', category: 'sitework', date: null, title: 'Excavation Project 01', cover: null, images: [] },
-        { slug: 'site-preparation-01', category: 'sitework', date: null, title: 'Site Preparation 01', cover: null, images: [] }
+{
+  "slug": "corning-house-sitework",
+  "title": "Corning House Sitework",
+  "category": "sitework",
+  "showInPortfolio": true,
+  "date": null,
+  "cover": {
+    "src": "assets/projects/sitework/corning-house-sitework/cover.webp",
+    "alt": "Corning House Sitework cover photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/cover.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2170.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_4823.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2171.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_4829.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_1967.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_5040.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_5156.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_5400.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_5401.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_5169.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2307.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_5168.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_5402.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2082.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2310.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2308.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2072.webp",
+      "alt": "Corning House Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/corning-house-sitework/img_2081.webp",
+      "alt": "Corning House Sitework photo"
+    }
+  ],
+  "href": "project.html?category=sitework&project=corning-house-sitework"
+},
+{
+  "slug": "poolhouse-sitework",
+  "title": "Poolhouse Sitework",
+  "category": "sitework",
+  "showInPortfolio": true,
+  "date": null,
+  "cover": {
+    "src": "assets/projects/sitework/poolhouse-sitework/cover.webp",
+    "alt": "Poolhouse Sitework cover photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/sitework/poolhouse-sitework/cover.webp",
+      "alt": "Poolhouse Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/poolhouse-sitework/img_2812.webp",
+      "alt": "Poolhouse Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/poolhouse-sitework/img_2813.webp",
+      "alt": "Poolhouse Sitework photo"
+    },
+    {
+      "src": "assets/projects/sitework/poolhouse-sitework/img_2814.webp",
+      "alt": "Poolhouse Sitework photo"
+    }
+  ],
+  "href": "project.html?category=sitework&project=poolhouse-sitework"
+}
       ]
     },
     mechanical: {
@@ -260,3 +378,172 @@ const portfolioData = {
     }
   }
 };
+
+// Mechanical galleries imported from the supplied Drive folders.
+portfolioData.groups["air-source-heat-pumps"].projects.push({
+  "slug": "catskills-heat-pump",
+  "title": "Catskill's Heat pump",
+  "cover": {
+    "src": "assets/projects/mechanical/air-source-heat-pumps/catskills-heat-pump/IMG_1483.webp",
+    "alt": "Catskill's Heat pump installation photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/catskills-heat-pump/IMG_1483.webp",
+      "alt": "Catskill's Heat pump installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/catskills-heat-pump/IMG_1493.webp",
+      "alt": "Catskill's Heat pump installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/catskills-heat-pump/IMG_1494.webp",
+      "alt": "Catskill's Heat pump installation photo"
+    }
+  ],
+  "href": "project.html?group=air-source-heat-pumps&project=catskills-heat-pump"
+});
+portfolioData.groups["air-source-heat-pumps"].projects.push({
+  "slug": "additional-photos",
+  "title": "Additional Photos",
+  "cover": {
+    "src": "assets/additional-photos-cover.svg",
+    "alt": "Additional photos gallery"
+  },
+  "images": [
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/additional-photos/IMG_9231.webp",
+      "alt": "Additional photos installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/additional-photos/IMG_9943.webp",
+      "alt": "Additional photos installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/additional-photos/IMG_3867.webp",
+      "alt": "Additional photos installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/additional-photos/IMG_9941.webp",
+      "alt": "Additional photos installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/air-source-heat-pumps/additional-photos/IMG_3797.webp",
+      "alt": "Additional photos installation photo"
+    }
+  ],
+  "href": "project.html?group=air-source-heat-pumps&project=additional-photos"
+});
+portfolioData.groups["well-connects"].projects.push({
+  "slug": "scio-well-connect",
+  "title": "Scio Well Connect",
+  "cover": {
+    "src": "assets/projects/mechanical/well-connects/scio-well-connect/IMG_3269.webp",
+    "alt": "Scio Well Connect installation photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/mechanical/well-connects/scio-well-connect/IMG_3269.webp",
+      "alt": "Scio Well Connect installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/well-connects/scio-well-connect/IMG_3274.webp",
+      "alt": "Scio Well Connect installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/well-connects/scio-well-connect/IMG_3272.webp",
+      "alt": "Scio Well Connect installation photo"
+    }
+  ],
+  "href": "project.html?group=well-connects&project=scio-well-connect"
+});
+portfolioData.groups["well-connects"].projects.push({
+  "slug": "dunkirk-well-connect",
+  "title": "Dunkirk Well Connect",
+  "cover": {
+    "src": "assets/projects/mechanical/well-connects/dunkirk-well-connect/IMG_2029.webp",
+    "alt": "Dunkirk Well Connect installation photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/mechanical/well-connects/dunkirk-well-connect/IMG_2029.webp",
+      "alt": "Dunkirk Well Connect installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/well-connects/dunkirk-well-connect/IMG_2027.webp",
+      "alt": "Dunkirk Well Connect installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/well-connects/dunkirk-well-connect/IMG_2031.webp",
+      "alt": "Dunkirk Well Connect installation photo"
+    }
+  ],
+  "href": "project.html?group=well-connects&project=dunkirk-well-connect"
+});
+portfolioData.groups["well-connects"].projects.push({
+  "slug": "additional-photos",
+  "title": "Additional Photos",
+  "cover": {
+    "src": "assets/additional-photos-cover.svg",
+    "alt": "Additional photos gallery"
+  },
+  "images": [
+    {
+      "src": "assets/projects/mechanical/well-connects/additional-photos/IMG_2489.webp",
+      "alt": "Additional photos installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/well-connects/additional-photos/IMG_2490.webp",
+      "alt": "Additional photos installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/well-connects/additional-photos/IMG_2716.webp",
+      "alt": "Additional photos installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/well-connects/additional-photos/IMG_3077.webp",
+      "alt": "Additional photos installation photo"
+    }
+  ],
+  "href": "project.html?group=well-connects&project=additional-photos"
+});
+
+// Lando's ERV: cover selected from the named placeholder photo in Drive.
+portfolioData.galleries.mechanical.projects.push({
+  "slug": "landos-erv",
+  "title": "Lando's ERV",
+  "category": "mechanical",
+  "showInPortfolio": true,
+  "date": null,
+  "cover": {
+    "src": "assets/projects/mechanical/landos-erv/cover.webp",
+    "alt": "Lando's ERV installation photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/mechanical/landos-erv/cover.webp",
+      "alt": "Lando's ERV installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/landos-erv/img_3822.webp",
+      "alt": "Lando's ERV installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/landos-erv/img_3752.webp",
+      "alt": "Lando's ERV installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/landos-erv/img_3824.webp",
+      "alt": "Lando's ERV installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/landos-erv/img_3823.webp",
+      "alt": "Lando's ERV installation photo"
+    },
+    {
+      "src": "assets/projects/mechanical/landos-erv/img_3817.webp",
+      "alt": "Lando's ERV installation photo"
+    }
+  ],
+  "href": "project.html?category=mechanical&project=landos-erv"
+});

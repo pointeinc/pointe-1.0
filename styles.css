@@ -518,3 +518,20 @@ button,input,textarea,select{font:inherit}
 .greenhurst-photo-grid img{width:100%;height:100%;object-fit:cover}
 @media(max-width:700px){.greenhurst-photo-grid{grid-template-columns:1fr;gap:18px}}
 @media(prefers-reduced-motion:reduce){html:has([data-project="greenhurst"]){scroll-behavior:auto}}
+
+/* Fit supporting gallery photos within the viewport, including portrait images. */
+[data-supporting-project] .lightbox{display:block;padding:0}
+[data-supporting-project] .lightbox[hidden]{display:none}
+[data-supporting-project] .lightbox-stage{position:absolute;inset:80px 104px;height:auto;min-width:0;min-height:0}
+[data-supporting-project] .lightbox-stage figure{width:100%;height:100%;min-width:0;min-height:0;gap:12px}
+[data-supporting-project] .lightbox-stage figure img{width:100%;height:100%;min-height:0;object-fit:contain;flex:1}
+[data-supporting-project] .lightbox-stage figcaption{flex:none}
+[data-supporting-project] .lightbox-control{position:absolute;top:50%;transform:translateY(-50%)}
+[data-supporting-project] .lightbox-prev{left:24px}
+[data-supporting-project] .lightbox-next{right:24px}
+@media(max-width:900px){
+  [data-supporting-project] .lightbox-stage{inset:76px 14px 112px}
+  [data-supporting-project] .lightbox-control{top:auto;bottom:48px;transform:none;margin:0}
+  [data-supporting-project] .lightbox-prev{left:calc(50% - 62px)}
+  [data-supporting-project] .lightbox-next{left:calc(50% + 10px);right:auto}
+}

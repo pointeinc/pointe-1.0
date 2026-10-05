@@ -29,8 +29,9 @@ if(categoryGrid&&categoryData){
 const supportingRoot=document.querySelector('[data-supporting-project-root]');
 if(supportingRoot&&portfolioSource){
   const params=new URLSearchParams(window.location.search);
+  const groupKey=params.get('group');
   const key=params.get('category');
-  const data=key?portfolioSource.galleries[key]:null;
+  const data=groupKey?portfolioSource.groups[groupKey]:(key?portfolioSource.galleries[key]:null);
   const project=data?.projects?.find(item=>item.slug===params.get('project'));
   if(!data||!project){
     document.title='Project Not Found | Pointe Construction';
@@ -41,12 +42,12 @@ if(supportingRoot&&portfolioSource){
     const stageOrder={before:0,progress:1,finished:2,detail:3};
     const allImages=[...(project.images||[])].sort((a,b)=>(stageOrder[a.stage]??4)-(stageOrder[b.stage]??4));
     const configuredCover=typeof project.cover==='string'?{src:project.cover}:project.cover;
-    const cover=configuredCover?.src?configuredCover:allImages.find(image=>image.stage==='finished')||allImages[0]||null;
+    const cover=project.slug==='additional-photos'?allImages[0]||null:(configuredCover?.src?configuredCover:allImages.find(image=>image.stage==='finished')||allImages[0]||null);
     const stageLabel=stage=>({before:'Before',progress:'In progress',finished:'Finished',detail:'Detail'}[stage]||'');
     const gallery=allImages.length?allImages.map((image,index)=>{const label=image.caption||stageLabel(image.stage);return `<button class="supporting-story-image" type="button" data-supporting-image="${index}" aria-label="Open ${project.title} photo ${index+1}"><img src="${image.src}" alt="${image.alt||`${project.title} project photo`}" loading="lazy">${label?`<span>${label}</span>`:''}</button>`}).join(''):'<div class="supporting-story-placeholder"><span class="placeholder-mark" aria-hidden="true">P</span><strong>Project photography awaiting selection</strong></div>';
     const heroStyle=cover?.src?` style="--supporting-hero-image:url('${cover.src}')"`:'';
     const heroClass=cover?.src?' has-project-image':' is-project-placeholder';
-    supportingRoot.innerHTML=`<section class="supporting-project-hero${heroClass}"${heroStyle}><div class="container supporting-project-hero-copy"><a class="back-link" href="${data.href}"><span aria-hidden="true">&larr;</span> Back to ${data.title}</a><p class="eyebrow">${data.title}</p><h1>${project.title}</h1>${project.meta?`<p>${project.meta}</p>`:''}${cover?.src?'':'<span class="supporting-hero-placeholder">Project photography awaiting selection</span>'}</div></section><section class="section supporting-story-section"><div class="container"><div class="supporting-story-heading"><p class="eyebrow">Project Gallery</p><h2 class="section-title">The project, in pictures.</h2></div><div class="supporting-story-gallery" data-story-gallery>${gallery}</div></div></section>`;
+    supportingRoot.innerHTML=`<section class="supporting-project-hero${heroClass}"${heroStyle}><div class="container supporting-project-hero-copy"><a class="back-link" href="work.html"><span aria-hidden="true">&larr;</span> Back to Our Work</a><p class="eyebrow">${data.title}</p><h1>${project.title}</h1>${project.meta?`<p>${project.meta}</p>`:''}${cover?.src?'':'<span class="supporting-hero-placeholder">Project photography awaiting selection</span>'}</div></section><section class="section supporting-story-section"><div class="container"><div class="supporting-story-heading"><p class="eyebrow">Project Gallery</p><h2 class="section-title">The project, in pictures.</h2></div><div class="supporting-story-gallery" data-story-gallery>${gallery}</div></div></section>`;
     if(allImages.length){
       const root=document.querySelector('[data-lightbox-root]');let active=0,lastFocused=null,touchStart=0;
       root.innerHTML=`<div class="lightbox" role="dialog" aria-modal="true" aria-label="${project.title} image viewer" hidden><button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button><button class="lightbox-control lightbox-prev" type="button" aria-label="Previous image">&larr;</button><div class="lightbox-stage" aria-live="polite"></div><button class="lightbox-control lightbox-next" type="button" aria-label="Next image">&rarr;</button><p class="lightbox-count"></p></div>`;
