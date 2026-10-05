@@ -24,14 +24,14 @@ const portfolioData = {
       type: 'group', title: 'Well Connects', category: 'mechanical',
       date: null, sortOrder: 0, showInPortfolio: true,
       href: 'well-connects.html',
-      cover: { src: 'assets/mechanical-group-placeholder.svg', alt: 'Development placeholder: project photography coming soon' },
+      cover: { src: 'assets/projects/mechanical/well-connects/additional-photos/IMG_2489.webp', alt: 'Well Connect installation with insulated ductwork and basement mechanical equipment' },
       projects: []
     },
     'air-source-heat-pumps': {
       type: 'group', title: 'Air Source Heat Pumps', category: 'mechanical',
       date: null, sortOrder: 0, showInPortfolio: true,
       href: 'air-source-heat-pumps.html',
-      cover: { src: 'assets/mechanical-group-placeholder.svg', alt: 'Development placeholder: project photography coming soon' },
+      cover: { src: 'assets/projects/mechanical/air-source-heat-pumps/additional-photos/IMG_9231.webp', alt: 'Outdoor air source heat pump mounted beside a home' },
       projects: []
     }
   },
@@ -143,9 +143,322 @@ const portfolioData = {
       type: 'category', title: 'Renovations & Additions', eyebrow: 'Project Collection', href: 'renovations-additions.html',
       status: 'Individual renovation and addition projects, documented from the original space through completion.',
       projects: [
-        { slug: 'kitchen-renovation-01', category: 'interior', date: null, title: 'Kitchen Renovation 01', cover: null, images: [] },
-        // Scope unclear: confirm Interior or Exterior before assigning a filter category.
-        { slug: 'addition-01', category: null, date: null, title: 'Addition 01', cover: null, images: [] }
+{
+  "slug": "downstate-flooring",
+  "title": "Downstate Flooring",
+  "category": "interior",
+  "date": null,
+  "showInPortfolio": true,
+  "cover": {
+    "src": "assets/projects/renovations/downstate-flooring/cover.webp",
+    "alt": "Downstate Flooring project photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/renovations/downstate-flooring/cover.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8519.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8527.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8497.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8515.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8509.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8505.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8530.webp",
+      "alt": "Downstate Flooring project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-flooring/img_8533.webp",
+      "alt": "Downstate Flooring project photo"
+    }
+  ],
+  "href": "project.html?category=renovations&project=downstate-flooring"
+},
+{
+  "slug": "downstate-bathroom",
+  "title": "Downstate Bathroom",
+  "category": "interior",
+  "date": null,
+  "showInPortfolio": true,
+  "cover": {
+    "src": "assets/projects/renovations/downstate-bathroom/cover.webp",
+    "alt": "Downstate Bathroom project photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/renovations/downstate-bathroom/cover.webp",
+      "alt": "Downstate Bathroom project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-bathroom/img_9861.webp",
+      "alt": "Downstate Bathroom project photo"
+    },
+    {
+      "src": "assets/projects/renovations/downstate-bathroom/img_9860.webp",
+      "alt": "Downstate Bathroom project photo"
+    }
+  ],
+  "href": "project.html?category=renovations&project=downstate-bathroom"
+},
+{
+  "slug": "jasper-bathroom",
+  "title": "Jasper Bathroom",
+  "category": "interior",
+  "date": null,
+  "showInPortfolio": true,
+  "cover": {
+    "src": "assets/projects/renovations/jasper-bathroom/cover.webp",
+    "alt": "Jasper Bathroom project photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/renovations/jasper-bathroom/cover.webp",
+      "alt": "Jasper Bathroom project photo"
+    },
+    {
+      "src": "assets/projects/renovations/jasper-bathroom/img_9747.webp",
+      "alt": "Jasper Bathroom project photo"
+    },
+    {
+      "src": "assets/projects/renovations/jasper-bathroom/img_9745.webp",
+      "alt": "Jasper Bathroom project photo"
+    }
+  ],
+  "href": "project.html?category=renovations&project=jasper-bathroom"
+},
+{
+    "slug":  "tioga-addition",
+    "title":  "Tioga Addition",
+    "category":  "exterior",
+    "date":  null,
+    "showInPortfolio":  true,
+    "cover":  {
+                  "src":  "assets/projects/renovations/tioga-addition/cover.webp",
+                  "alt":  "Tioga Addition project photo"
+              },
+    "images":  [
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6028.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6029.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6048.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6031.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6051.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6052.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6053.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6055.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_6148.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_7642.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_7643.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/cover.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_0008.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_0010.webp",
+                       "alt":  "Tioga Addition project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/tioga-addition/img_0012.webp",
+                       "alt":  "Tioga Addition project photo"
+                   }
+               ],
+    "href":  "project.html?category=renovations\u0026project=tioga-addition"
+},
+{
+    "slug":  "wharton-finish-work",
+    "title":  "Wharton Finish Work",
+    "category":  "interior",
+    "date":  null,
+    "showInPortfolio":  true,
+    "cover":  {
+                  "src":  "assets/projects/renovations/wharton-finish-work/cover.webp",
+                  "alt":  "Wharton Finish work project photo"
+              },
+    "images":  [
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1362.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_3429.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_3430.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_3432.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_3426.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_3424.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_3428.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_3427.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1577.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1578.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1584.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1585.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1588.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1589.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1587.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/cover.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1580.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1172.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1173.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1368.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1369.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   },
+                   {
+                       "src":  "assets/projects/renovations/wharton-finish-work/img_1388.webp",
+                       "alt":  "Wharton Finish work project photo"
+                   }
+               ],
+    "href":  "project.html?category=renovations\u0026project=wharton-finish-work"
+},
+{
+  "slug": "canisteo-trim",
+  "title": "Canisteo Trim",
+  "category": "interior",
+  "date": null,
+  "showInPortfolio": true,
+  "cover": {
+    "src": "assets/projects/renovations/canisteo-trim/cover.webp",
+    "alt": "Canisteo Trim project photo"
+  },
+  "images": [
+    {
+      "src": "assets/projects/renovations/canisteo-trim/cover.webp",
+      "alt": "Canisteo Trim project photo"
+    },
+    {
+      "src": "assets/projects/renovations/canisteo-trim/img_0447.webp",
+      "alt": "Canisteo Trim project photo"
+    },
+    {
+      "src": "assets/projects/renovations/canisteo-trim/img_0461.webp",
+      "alt": "Canisteo Trim project photo"
+    },
+    {
+      "src": "assets/projects/renovations/canisteo-trim/img_0449.webp",
+      "alt": "Canisteo Trim project photo"
+    },
+    {
+      "src": "assets/projects/renovations/canisteo-trim/img_0459.webp",
+      "alt": "Canisteo Trim project photo"
+    },
+    {
+      "src": "assets/projects/renovations/canisteo-trim/img_0456.webp",
+      "alt": "Canisteo Trim project photo"
+    }
+  ],
+  "href": "project.html?category=renovations&project=canisteo-trim"
+}
       ]
     },
     exteriors: {
@@ -247,94 +560,94 @@ const portfolioData = {
       status: 'Individual residential sitework and excavation projects presented in clear project sequences.',
       projects: [
 {
-  "slug": "corning-house-sitework",
-  "title": "Corning House Sitework",
-  "category": "sitework",
-  "showInPortfolio": true,
-  "date": null,
-  "cover": {
-    "src": "assets/projects/sitework/corning-house-sitework/cover.webp",
-    "alt": "Corning House Sitework cover photo"
-  },
-  "images": [
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/cover.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2170.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_4823.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2171.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_4829.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_1967.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_5040.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_5156.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_5400.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_5401.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_5169.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2307.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_5168.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_5402.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2082.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2310.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2308.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2072.webp",
-      "alt": "Corning House Sitework photo"
-    },
-    {
-      "src": "assets/projects/sitework/corning-house-sitework/img_2081.webp",
-      "alt": "Corning House Sitework photo"
-    }
-  ],
-  "href": "project.html?category=sitework&project=corning-house-sitework"
+    "slug":  "corning-house-sitework",
+    "title":  "Corning House Sitework",
+    "category":  "sitework",
+    "showInPortfolio":  true,
+    "date":  null,
+    "cover":  {
+                  "src":  "assets/projects/sitework/corning-house-sitework/cover.webp",
+                  "alt":  "Corning House Sitework cover photo"
+              },
+    "images":  [
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_1967.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/cover.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2082.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2072.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2308.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2081.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2307.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2310.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2170.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_2171.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_4823.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_4829.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_5040.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_5168.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_5169.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_5156.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_5401.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_5400.webp",
+                       "alt":  "Corning House Sitework photo"
+                   },
+                   {
+                       "src":  "assets/projects/sitework/corning-house-sitework/img_5402.webp",
+                       "alt":  "Corning House Sitework photo"
+                   }
+               ],
+    "href":  "project.html?category=sitework\u0026project=corning-house-sitework"
 },
 {
   "slug": "poolhouse-sitework",
@@ -407,8 +720,8 @@ portfolioData.groups["air-source-heat-pumps"].projects.push({
   "slug": "additional-photos",
   "title": "Additional Photos",
   "cover": {
-    "src": "assets/additional-photos-cover.svg",
-    "alt": "Additional photos gallery"
+    "src": "assets/projects/mechanical/air-source-heat-pumps/additional-photos/IMG_9231.webp",
+    "alt": "Air source heat pump installation"
   },
   "images": [
     {
@@ -484,8 +797,8 @@ portfolioData.groups["well-connects"].projects.push({
   "slug": "additional-photos",
   "title": "Additional Photos",
   "cover": {
-    "src": "assets/additional-photos-cover.svg",
-    "alt": "Additional photos gallery"
+    "src": "assets/projects/mechanical/well-connects/additional-photos/IMG_2489.webp",
+    "alt": "Well Connect installation and insulated basement ductwork"
   },
   "images": [
     {

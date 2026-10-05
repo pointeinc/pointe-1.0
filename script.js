@@ -65,6 +65,7 @@ if(portfolio&&portfolioSource){
   const projectCard=(entry,index)=>`<a class="project-card" href="${entry.href}"><span class="project-card-visual project-cover-${(index%4)+1}${entry.cover?' has-cover':''}" aria-hidden="true">${entry.cover?`<img src="${entry.cover}" alt="" width="1200" height="1600" loading="lazy">`:'<span>Project photography<br>coming soon</span>'}</span><span class="project-card-content"><span class="project-number">${String(index+1).padStart(2,'0')}</span><span><strong>${entry.title}</strong><small>View project gallery <span aria-hidden="true">&rarr;</span></small></span></span></a>`;
   const featured=portfolioSource.featured;
   const workCategories={interior:'Interior',exterior:'Exterior',sitework:'Sitework',mechanical:'Mechanical'};
+  const categoryOrder=Object.keys(workCategories);
   // Reuse the same project records and URLs as the existing individual galleries.
   const moreProjects=Object.entries(portfolioSource.galleries).flatMap(([key,gallery])=>
     (gallery.projects||[]).map(project=>({
@@ -75,6 +76,8 @@ if(portfolio&&portfolioSource){
   ).concat(Object.values(portfolioSource.groups||{}))
     .filter(project=>project.showInPortfolio&&project.cover?.src)
     .sort((a,b)=>{
+      const typeOrder=categoryOrder.indexOf(a.category)-categoryOrder.indexOf(b.category);
+      if(typeOrder)return typeOrder;
       const dateA=Date.parse(a.date)||0,dateB=Date.parse(b.date)||0;
       return dateB-dateA||(b.sortOrder||0)-(a.sortOrder||0)||a.title.localeCompare(b.title);
     });
