@@ -1,0 +1,10 @@
+# Git history is source-control metadata, not a website asset.
+/.git/
+
+# Local development and deployment tooling are not public assets.
+/.wrangler/
+/node_modules/
+/debug.log
+/wrangler.json
+/wrangler.jsonc
+/wrangler.toml
